@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/login -->
+<html lang="es" style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    :root,
+    :host {
+      --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+      --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+      --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+      --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+      --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+      --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+      --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+      --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+      --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+      --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+      --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+    }
+
+    svg:not(:root).svg-inline--fa,
+    svg:not(:host).svg-inline--fa {
+      overflow: visible;
+      box-sizing: content-box;
+    }
+
+    .svg-inline--fa {
+      display: var(--fa-display, inline-block);
+      height: 1em;
+      overflow: visible;
+      vertical-align: -0.125em;
+    }
+
+    .svg-inline--fa.fa-2xs {
+      vertical-align: 0.1em;
+    }
+
+    .svg-inline--fa.fa-xs {
+      vertical-align: 0em;
+    }
+
+    .svg-inline--fa.fa-sm {
+      vertical-align: -0.0714285705em;
+    }
+
+    .svg-inline--fa.fa-lg {
+      vertical-align: -0.2em;
+    }
+
+    .svg-inline--fa.fa-xl {
+      vertical-align: -0.25em;
+    }
+
+    .svg-inline--fa.fa-2xl {
+      vertical-align: -0.3125em;
+    }
+
+    .svg-inline--fa.fa-pull-left {
+      margin-right: var(--fa-pull-margin, 0.3em);
+      width: auto;
+    }
+
+    .svg-inline--fa.fa-pull-right {
+      margin-left: var(--fa-pull-margin, 0.3em);
+      width: auto;
+    }
+
+    .svg-inline--fa.fa-li {
+      width: var(--fa-li-width, 2em);
+      top: 0.25em;
+    }
+
+    .svg-inline--fa.fa-fw {
+      width: var(--fa-fw-width, 1.25em);
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .fa-layers-counter,
+    .fa-layers-text {
+      display: inline-block;
+      position: absolute;
+      text-align: center;
+    }
+
+    .fa-layers {
+      display: inline-block;
+      height: 1em;
+      position: relative;
+      text-align: center;
+      vertical-align: -0.125em;
+      width: 1em;
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      transform-origin: center center;
+    }
+
+    .fa-layers-text {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+    }
+
+    .fa-layers-counter {
+      background-color: var(--fa-counter-background-color, #ff253a);
+      border-radius: var(--fa-counter-border-radius, 1em);
+      box-sizing: border-box;
+      color: var(--fa-inverse, #fff);
+      line-height: var(--fa-counter-line-height, 1);
+      max-width: var(--fa-counter-max-width, 5em);
+      min-width: var(--fa-counter-min-width, 1.5em);
+      overflow: hidden;
+      padding: var(--fa-counter-padding, 0.25em 0.5em);
+      right: var(--fa-right, 0);
+      text-overflow: ellipsis;
+      top: var(--fa-top, 0);
+      transform: scale(var(--fa-counter-scale, 0.25));
+      transform-origin: top right;
+    }
+
+    .fa-layers-bottom-right {
+      bottom: var(--fa-bottom, 0);
+      right: var(--fa-right, 0);
+      top: auto;
+      transform: scale(var(--fa-layers-scale, 0.25));
+      transform-origin: bottom right;
+    }
+
+    .fa-layers-bottom-left {
+      bottom: var(--fa-bottom, 0);
+      left: var(--fa-left, 0);
+      right: auto;
+      top: auto;
+      transform: scale(var(--fa-layers-scale, 0.25));
+      transform-origin: bottom left;
+    }
+
+    .fa-layers-top-right {
+      top: var(--fa-top, 0);
+      right: var(--fa-right, 0);
+      transform: scale(var(--fa-layers-scale, 0.25));
+      transform-origin: top right;
+    }
+
+    .fa-layers-top-left {
+      left: var(--fa-left, 0);
+      right: auto;
+      top: var(--fa-top, 0);
+      transform: scale(var(--fa-layers-scale, 0.25));
+      transform-origin: top left;
+    }
+
+    .fa-1x {
+      font-size: 1em;
+    }
+
+    .fa-2x {
+      font-size: 2em;
+    }
+
+    .fa-3x {
+      font-size: 3em;
+    }
+
+    .fa-4x {
+      font-size: 4em;
+    }
+
+    .fa-5x {
+      font-size: 5em;
+    }
+
+    .fa-6x {
+      font-size: 6em;
+    }
+
+    .fa-7x {
+      font-size: 7em;
+    }
+
+    .fa-8x {
+      font-size: 8em;
+    }
+
+    .fa-9x {
+      font-size: 9em;
+    }
+
+    .fa-10x {
+      font-size: 10em;
+    }
+
+    .fa-2xs {
+      font-size: 0.625em;
+      line-height: 0.1em;
+      vertical-align: 0.225em;
+    }
+
+    .fa-xs {
+      font-size: 0.75em;
+      line-height: 0.0833333337em;
+      vertical-align: 0.125em;
+    }
+
+    .fa-sm {
+      font-size: 0.875em;
+      line-height: 0.0714285718em;
+      vertical-align: 0.0535714295em;
+    }
+
+    .fa-lg {
+      font-size: 1.25em;
+      line-height: 0.05em;
+      vertical-align: -0.075em;
+    }
+
+    .fa-xl {
+      font-size: 1.5em;
+      line-height: 0.0416666682em;
+      vertical-align: -0.125em;
+    }
+
+    .fa-2xl {
+      font-size: 2em;
+      line-height: 0.03125em;
+      vertical-align: -0.1875em;
+    }
+
+    .fa-fw {
+      text-align: center;
+      width: 1.25em;
+    }
+
+    .fa-ul {
+      list-style-type: none;
+      margin-left: var(--fa-li-margin, 2.5em);
+      padding-left: 0;
+    }
+
+    .fa-ul>li {
+      position: relative;
+    }
+
+    .fa-li {
+      left: calc(-1 * var(--fa-li-width, 2em));
+      position: absolute;
+      text-align: center;
+      width: var(--fa-li-width, 2em);
+      line-height: inherit;
+    }
+
+    .fa-border {
+      border-color: var(--fa-border-color, #eee);
+      border-radius: var(--fa-border-radius, 0.1em);
+      border-style: var(--fa-border-style, solid);
+      border-width: var(--fa-border-width, 0.08em);
+      padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+    }
+
+    .fa-pull-left {
+      float: left;
+      margin-right: var(--fa-pull-margin, 0.3em);
+    }
+
+    .fa-pull-right {
+      float: right;
+      margin-left: var(--fa-pull-margin, 0.3em);
+    }
+
+    .fa-beat {
+      animation-name: fa-beat;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, ease-in-out);
+    }
+
+    .fa-bounce {
+      animation-name: fa-bounce;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+    }
+
+    .fa-fade {
+      animation-name: fa-fade;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+    }
+
+    .fa-beat-fade {
+      animation-name: fa-beat-fade;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+    }
+
+    .fa-flip {
+      animation-name: fa-flip;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, ease-in-out);
+    }
+
+    .fa-shake {
+      animation-name: fa-shake;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, linear);
+    }
+
+    .fa-spin {
+      animation-name: fa-spin;
+      animation-delay: var(--fa-animation-delay, 0s);
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 2s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, linear);
+    }
+
+    .fa-spin-reverse {
+      --fa-animation-direction: reverse;
+    }
+
+    .fa-pulse,
+    .fa-spin-pulse {
+      animation-name: fa-spin;
+      animation-direction: var(--fa-animation-direction, normal);
+      animation-duration: var(--fa-animation-duration, 1s);
+      animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+      animation-timing-function: var(--fa-animation-timing, steps(8));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .fa-beat,
+      .fa-bounce,
+      .fa-fade,
+      .fa-beat-fade,
+      .fa-flip,
+      .fa-pulse,
+      .fa-shake,
+      .fa-spin,
+      .fa-spin-pulse {
+        animation-delay: -1ms;
+        animation-duration: 1ms;
+        animation-iteration-count: 1;
+        transition-delay: 0s;
+        transition-duration: 0s;
+      }
+    }
+
+    @keyframes fa-beat {
+
+      0%,
+      90% {
+        transform: scale(1);
+      }
+
+      45% {
+        transform: scale(var(--fa-beat-scale, 1.25));
+      }
+    }
+
+    @keyframes fa-bounce {
+      0% {
+        transform: scale(1, 1) translateY(0);
+      }
+
+      10% {
+        transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+      }
+
+      30% {
+        transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+      }
+
+      50% {
+        transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+      }
+
+      57% {
+        transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+      }
+
+      64% {
+        transform: scale(1, 1) translateY(0);
+      }
+
+      100% {
+        transform: scale(1, 1) translateY(0);
+      }
+    }
+
+    @keyframes fa-fade {
+      50% {
+        opacity: var(--fa-fade-opacity, 0.4);
+      }
+    }
+
+    @keyframes fa-beat-fade {
+
+      0%,
+      100% {
+        opacity: var(--fa-beat-fade-opacity, 0.4);
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(var(--fa-beat-fade-scale, 1.125));
+      }
+    }
+
+    @keyframes fa-flip {
+      50% {
+        transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+      }
+    }
+
+    @keyframes fa-shake {
+      0% {
+        transform: rotate(-15deg);
+      }
+
+      4% {
+        transform: rotate(15deg);
+      }
+
+      8%,
+      24% {
+        transform: rotate(-18deg);
+      }
+
+      12%,
+      28% {
+        transform: rotate(18deg);
+      }
+
+      16% {
+        transform: rotate(-22deg);
+      }
+
+      20% {
+        transform: rotate(22deg);
+      }
+
+      32% {
+        transform: rotate(-12deg);
+      }
+
+      36% {
+        transform: rotate(12deg);
+      }
+
+      40%,
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes fa-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .fa-rotate-90 {
+      transform: rotate(90deg);
+    }
+
+    .fa-rotate-180 {
+      transform: rotate(180deg);
+    }
+
+    .fa-rotate-270 {
+      transform: rotate(270deg);
+    }
+
+    .fa-flip-horizontal {
+      transform: scale(-1, 1);
+    }
+
+    .fa-flip-vertical {
+      transform: scale(1, -1);
+    }
+
+    .fa-flip-both,
+    .fa-flip-horizontal.fa-flip-vertical {
+      transform: scale(-1, -1);
+    }
+
+    .fa-rotate-by {
+      transform: rotate(var(--fa-rotate-angle, 0));
+    }
+
+    .fa-stack {
+      display: inline-block;
+      vertical-align: middle;
+      height: 2em;
+      position: relative;
+      width: 2.5em;
+    }
+
+    .fa-stack-1x,
+    .fa-stack-2x {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: var(--fa-stack-z-index, auto);
+    }
+
+    .svg-inline--fa.fa-stack-1x {
+      height: 1em;
+      width: 1.25em;
+    }
+
+    .svg-inline--fa.fa-stack-2x {
+      height: 2em;
+      width: 2.5em;
+    }
+
+    .fa-inverse {
+      color: var(--fa-inverse, #fff);
+    }
+
+    .sr-only,
+    .fa-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .sr-only-focusable:not(:focus),
+    .fa-sr-only-focusable:not(:focus) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .svg-inline--fa .fa-primary {
+      fill: var(--fa-primary-color, currentColor);
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa .fa-secondary {
+      fill: var(--fa-secondary-color, currentColor);
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-primary {
+      opacity: var(--fa-secondary-opacity, 0.4);
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-secondary {
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    .svg-inline--fa mask .fa-primary,
+    .svg-inline--fa mask .fa-secondary {
+      fill: black;
+    }
+
+    .fad.fa-inverse,
+    .fa-duotone.fa-inverse {
+      color: var(--fa-inverse, #fff);
+    }
+  </style>
+  <link rel="preload" as="image" href="./login_files/usac_logo.svg">
+  <link rel="preload" as="image" href="./login_files/banner.jpg">
+  <link rel="stylesheet" href="./login_files/layout.css" data-precedence="next_static/css/app/layout.css">
+  <link rel="preload" as="script" fetchpriority="low" href="./login_files/webpack.js.descargar">
+  <script src="./login_files/main-app.js.descargar" async=""></script>
+  <script src="./login_files/app-pages-internals.js.descargar" async=""></script>
+  <script src="./login_files/layout.js.descargar" async=""></script>
+  <link rel="shortcut icon" href="http://localhost:3000/dda_logo.svg">
+  <script src="./login_files/polyfills.js.descargar" nomodule=""></script>
+  <style type="text/css" id="operaUserStyle"></style>
+  <style type="text/css"></style>
+  <link rel="preload" as="style" href="./login_files/layout.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DDA</title>
+  <meta name="description" content="División de Desarrollo Académico">
+  <link rel="icon" href="./login_files/favicon.ico" type="image/x-icon" sizes="16x16">
+</head>
+
+<body class="__className_b1da2a bg-crystal-white">
+  <script src="./login_files/webpack.js.descargar" async=""></script>
+  <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
+  <script>self.__next_f.push([1, "1:HL[\"/_next/static/css/app/layout.css?v=1729891300949\",\"style\"]\n0:D{\"name\":\"r1\",\"env\":\"Server\"}\n"])</script>
+  <script>self.__next_f.push([1, "2:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/app-router.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\nd:I[\"(app-pages-browser)/./src/app/context/AuthProvider.js\",[\"app/layout\",\"static/chunks/app/layout.js\"],\"default\"]\ne:I[\"(app-pages-browser)/./src/components/Navbar.jsx\",[\"app/layout\",\"static/chunks/app/layout.js\"],\"default\"]\nf:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n10:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/render-from-template-context.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n11:I[\"(app-pages-browser)/./src/app/not-found.js\",[\"app/not-found\",\"static/chunks/app/not-found.js\"],\"default\"]\n14:I[\"(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js\",[\"app-pages-internals\",\"static/chunks/app-pages-internals.js\"],\"\"]\n3:D{\"name\":\"\",\"env\":\"Server\"}\n4:D{\"name\":\"Home\",\"env\":\"Server\"}\n5:D{\"name\":\"ContactUs\",\"env\":\"Server\"}\n6:D{\"name\":\"FontAwesomeIcon\",\"env\":\"Server\"}\n6:[\"$\",\"svg\",null,{\"aria-hidden\":\"true\",\"focusable\":\"false\",\"data-prefix\":\"fas\",\"data-icon\":\"envelope\",\"className\":\"svg-inline--fa fa-envelope w-6\",\"role\":\"img\",\"xmlns\":\"http://www.w3.org/2000/svg\",\"viewBox\":\"0 0 512 512\",\"style\":{},\"children\":[\"$\",\"path\",null,{\"fill\":\"currentColor\",\"d\":\"M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z\",\"style\":{}}]}]\n5:[\"$\",\"div\",null,{\"className\":\"fixed bottom-16 right-0 z-50\",\"children\":[\"$\",\"a\",null,{\"href\":\"mailto:secretaria.jefaturadda@usac.edu.com\",\"className\":\"bg-space-black hover:bg-space-black text-white py-8 px-16 rounded-l-full shadow-custom-xl flex items-center space-x-6\",\"children\":[\"$6\",[\"$\",\"span\",null,{\"className\":\"text-xs font-light\",\"children\":\"Contácta"])</script>
+  <script>self.__next_f.push([1, "nos\"}]]}]}]\n7:D{\"name\":\"Footer\",\"env\":\"Server\"}\n8:D{\"name\":\"Logo\",\"env\":\"Server\"}\n8:[\"$\",\"svg\",null,{\"className\":\"h-[100px] w-[100px]\",\"viewBox\":\"0 0 1552 864\",\"fill\":\"none\",\"xmlns\":\"http://www.w3.org/2000/svg\",\"children\":[[\"$\",\"path\",null,{\"transform\":\"translate(188,145)\",\"d\":\"m0 0h196l28 2 21 3 36 9 23 8 15 8 17 12 13 12 8 7 11 14 8 13 14 29 6 18 6 24 4 22 2 36v31l-2 31-5 26-7 28-9 25-12 30-12 23-12 18-10 14-13 16-9 10-4 5-11 9-13 11-10 8-16 10-22 10-27 9-28 7-26 4-46 4h-208l-4-1v-10l6-32 9-52 3-8 224-1 25-5 14-5 21-11 12-8 12-11 11-12 10-13 10-18 8-17 9-25 7-27 4-24 2-20 1-20-2-28-3-18-5-19-6-13-7-12-8-10-10-9-16-8-14-6-10-3-7-1-106-1-1 10-10 54-8 41-8 53-10 58-5 26-3 5-5 1h-106l-3-1v-9l10-56 17-100 16-90 12-64 5-23z\",\"fill\":\"#FFFFFF\"}],[\"$\",\"path\",null,{\"transform\":\"translate(657,145)\",\"d\":\"m0 0h196l37 3 25 5 26 7 17 6 23 12 10 8 10 9 10 8 9 11 10 14 12 23 8 21 8 32 5 30 2 40v14l-3 37-5 26-8 32-10 29-10 23-10 19-10 16-11 15-10 14-12 13-11 11-11 9-14 12-15 10-16 8-17 7-25 8-24 6-27 4-45 4h-209l-4-2 2-17 14-77 3-7 223-1 27-5 15-6 17-9 15-10 13-12 12-14 14-21 8-15 9-25 6-21 6-27 3-20 1-11v-40l-3-21-5-19-6-16-9-16-9-10-12-9-16-8-17-6-10-2-107-1-1 10-7 40-22 128-6 35-5 29-2 5-5 1h-108l-3-1v-9l5-27 16-85 16-98 9-47 8-44 6-30 2-4z\",\"fill\":\"#FFFFFF\"}],[\"$\",\"path\",null,{\"transform\":\"translate(1256,145)\",\"d\":\"m0 0h129l3 2 3 19 11 82 12 89 10 85 7 57 3 27 9 64 14 109v10l-6 2h-106l-2-2-3-18-7-71-10-102-7-79-10-109-4-44-17 35-21 41-13 28-40 80-9 20-13 26-10 19-18 38-25 50-17 35-11 24-12 23-5 6h-117l-3-1 1-7 10-20 7-12 8-16 6-10 10-21 8-16 15-28 9-16 19-38 7-12 8-16 13-24 20-40 11-19 6-12 6-9 9-21 12-22 8-15 10-19 28-54 8-15 12-22 21-42 11-18z\",\"fill\":\"#FFFFFF\"}]]}]\n9:D{\"name\":\"FontAwesomeIcon\",\"env\":\"Server\"}\n9:[\"$\",\"svg\",null,{\"aria-hidden\":\"true\",\"focusable\":\"false\",\"data-prefix\":\"fab\",\"data-icon\":\"square-facebook\",\"className\":\"svg-inline--fa fa-square-facebook w-6\",\"role\":\"img\",\"xmlns\":\"http://www.w3.org/2000/svg\",\"viewBox\":\"0 0 448 512\",\"style\":{},\"children\":[\"$\",\"path\",null,{\"fill\":\"currentColor\",\"d\":\"M64 32C28.7 32 "])</script>
+  <script>self.__next_f.push([1, "0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z\",\"style\":{}}]}]\na:D{\"name\":\"FontAwesomeIcon\",\"env\":\"Server\"}\na:[\"$\",\"svg\",null,{\"aria-hidden\":\"true\",\"focusable\":\"false\",\"data-prefix\":\"fab\",\"data-icon\":\"square-x-twitter\",\"className\":\"svg-inline--fa fa-square-x-twitter w-6\",\"role\":\"img\",\"xmlns\":\"http://www.w3.org/2000/svg\",\"viewBox\":\"0 0 448 512\",\"style\":{},\"children\":[\"$\",\"path\",null,{\"fill\":\"currentColor\",\"d\":\"M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z\",\"style\":{}}]}]\nb:D{\"name\":\"FontAwesomeIcon\",\"env\":\"Server\"}\nb:[\"$\",\"svg\",null,{\"aria-hidden\":\"true\",\"focusable\":\"false\",\"data-prefix\":\"fas\",\"data-icon\":\"window-maximize\",\"className\":\"svg-inline--fa fa-window-maximize w-6\",\"role\":\"img\",\"xmlns\":\"http://www.w3.org/2000/svg\",\"viewBox\":\"0 0 512 512\",\"style\":{},\"children\":[\"$\",\"path\",null,{\"fill\":\"currentColor\",\"d\":\"M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM96 96l320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32s14.3-32 32-32z\",\"style\":{}}]}]\n7:[\"$\",\"footer\",null,{\"className\":\"bg-space-black text-white py-8 relative z-20\",\"children\":[\"$\",\"div\",null,{\"className\":\"container mx-auto flex flex-col md:flex-row justify-between items-center md:space-y-0\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex flex-col pl-32 items-center space-y-[-20px]\",\"children\":[\"$8\",[\"$\",\"span\",null,{\"className\":\"font-extralight text-[6px]\",\"children\":\"División de Desarrollo Académico\"}]]}],[\"$\",\"div\",null,{\"className\":\"border-y-8 bg-white w-[1px] h-40\"}],[\"$\",\"div\",null,{\"className\":\"flex flex-col justify-items-start space-y-10\",\"childr"])</script>
+  <script>self.__next_f.push([1, "en\":[[\"$\",\"h3\",null,{\"className\":\"text-sm font-semibold text-morning-yellow\",\"children\":\"CONÉCTATE\"}],[\"$\",\"ul\",null,{\"className\":\"space-y-6\",\"children\":[[\"$\",\"li\",null,{\"className\":\"flex items-center space-x-4\",\"children\":[\"$9\",[\"$\",\"a\",null,{\"href\":\"https://facebook.com/usacdda/?locale=es_LA\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"font-medium text-[10px] hover:underline\",\"children\":\"Facebook.com\"}]]}],[\"$\",\"li\",null,{\"className\":\"flex items-center space-x-4\",\"children\":[\"$a\",[\"$\",\"a\",null,{\"href\":\"https://x.com/usac_diged_dda?lang=es\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"font-medium text-[10px] hover:underline\",\"children\":\"X.com\"}]]}],[\"$\",\"li\",null,{\"className\":\"flex items-center space-x-4\",\"children\":[\"$b\",[\"$\",\"a\",null,{\"href\":\"https://virtual.usac.edu.gt/dda\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"font-medium text-[10px] hover:underline\",\"children\":\"Virtual.usac.edu.gt/dda\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-col justify-items-start mr-[450px]\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-sm font-semibold mt-0 mb-0 text-morning-yellow absolute\",\"children\":\"UBICACIÓN\"}],[\"$\",\"address\",null,{\"className\":\"leading-10 mt-10 font-extralight text-xs\",\"children\":[\"Edificio antiguo CALUSAC\",[\"$\",\"br\",null,{}],\"2o. Nivel Departamento de Educación\",[\"$\",\"br\",null,{}],\"Ciudad Universitaria, zona 12\",[\"$\",\"br\",null,{}],\"Ciudad de Guatemala\"]}]]}]]}]}]\n4:[[\"$\",\"main\",null,{\"className\":\"relative min-h-screen text-center\",\"children\":[[\"$\",\"div\",null,{\"className\":\"header animate-slideDownAndRound absolute top-0 left-0 w-full h-screen bg-[#022D5A] rounded-b-[75px] flex items-center drop-shadow-2xl justify-center space-x-10 z-10\",\"children\":[[\"$\",\"img\",null,{\"src\":\"usac_logo.svg\",\"alt\":\"usac_logo\",\"className\":\"w-32 fade-in-slower\"}],[\"$\",\"div\",null,{\"className\":\"border-y-morning-yellow bg-morning-yellow w-1 h-32 fade-in-slower\"}],[\"$\",\"div\",null,{\"className\":\"flex flex-col justify-items-center mr-[450px] text-center space-y-2 fade-in-slower\",\"chi"])</script>
+  <script>self.__next_f.push([1, "ldren\":[[\"$\",\"span\",null,{\"className\":\"w-[300px] text-left rounded-full flex font-normal text-xs text-crystal-white\",\"children\":[\"Departamento de Investigación\",[\"$\",\"span\",null,{\"className\":\"text-left px-1 rounded-full flex font-semibold italic text-xs text-crystal-white\",\"children\":\"DDA\"}]]}],[\"$\",\"span\",null,{\"className\":\"font-thin text-4xl text-crystal-white\",\"children\":\"PLATAFORMA DE INDICADORES\"}],[\"$\",\"span\",null,{\"className\":\"bg-crystal-white w-[290px] h-14 text-center py-2 px-6 rounded-full drop-shadow-2xl flex font-medium text-4xl text-ocean-blue\",\"children\":\"EDUCATIVOS\"}]]}]]}],[\"$\",\"img\",null,{\"src\":\"/resources/banner.jpg\",\"alt\":\"banner\",\"className\":\"absolute top-0 left-0 w-full h-full object-cover z-0\"}]]}],\"$5\",\"$7\"]\nc:D{\"name\":\"RootLayout\",\"env\":\"Server\"}\nc:[\"$\",\"html\",null,{\"lang\":\"es\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"link\",null,{\"rel\":\"shortcut icon\",\"href\":\"dda_logo.svg\"}]}],[\"$\",\"body\",null,{\"className\":\"__className_b1da2a bg-crystal-white\",\"children\":[\"$\",\"$Ld\",null,{\"children\":[[\"$\",\"$Le\",null,{}],[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$L11\",null,{}],\"notFoundStyles\":[],\"styles\":null}]]}]}]]}]\n12:D{\"name\":\"rQ\",\"env\":\"Server\"}\n12:null\n13:D{\"name\":\"\",\"env\":\"Server\"}\n15:[]\n0:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/app/layout.css?v=1729891300949\",\"precedence\":\"next_static/css/app/layout.css\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L2\",null,{\"buildId\":\"development\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L3\",\"$4\"],null],null]},[\"$c\",null],null],\"couldBeIntercepted\":false,\"initialHead\":[\"$12\",\"$L13\"],\"globalErrorComponent\":\"$14\",\"missingSlots\":\"$W15\"}]]\n"])</script>
+  <script>self.__next_f.push([1, "13:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"DDA\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"División de Desarrollo Académico\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n3:null\n"])</script>
+  <next-route-announcer style="position: absolute;"><template shadowrootmode="open">
+      <div aria-live="assertive" id="__next-route-announcer__" role="alert"
+        style="position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;">
+      </div>
+    </template></next-route-announcer>
+  <header
+    class="flex flex-row px-28 py-4 items-center justify-between box-border sticky top-0 z-20 fade-in shadow-2xl bg-crystal-white">
+    <a href="../index.html"><svg class="h-[40px] w-[60px]" viewBox="0 0 1552 864" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path transform="translate(188,145)"
+          d="m0 0h196l28 2 21 3 36 9 23 8 15 8 17 12 13 12 8 7 11 14 8 13 14 29 6 18 6 24 4 22 2 36v31l-2 31-5 26-7 28-9 25-12 30-12 23-12 18-10 14-13 16-9 10-4 5-11 9-13 11-10 8-16 10-22 10-27 9-28 7-26 4-46 4h-208l-4-1v-10l6-32 9-52 3-8 224-1 25-5 14-5 21-11 12-8 12-11 11-12 10-13 10-18 8-17 9-25 7-27 4-24 2-20 1-20-2-28-3-18-5-19-6-13-7-12-8-10-10-9-16-8-14-6-10-3-7-1-106-1-1 10-10 54-8 41-8 53-10 58-5 26-3 5-5 1h-106l-3-1v-9l10-56 17-100 16-90 12-64 5-23z"
+          fill="#022D5A"></path>
+        <path transform="translate(657,145)"
+          d="m0 0h196l37 3 25 5 26 7 17 6 23 12 10 8 10 9 10 8 9 11 10 14 12 23 8 21 8 32 5 30 2 40v14l-3 37-5 26-8 32-10 29-10 23-10 19-10 16-11 15-10 14-12 13-11 11-11 9-14 12-15 10-16 8-17 7-25 8-24 6-27 4-45 4h-209l-4-2 2-17 14-77 3-7 223-1 27-5 15-6 17-9 15-10 13-12 12-14 14-21 8-15 9-25 6-21 6-27 3-20 1-11v-40l-3-21-5-19-6-16-9-16-9-10-12-9-16-8-17-6-10-2-107-1-1 10-7 40-22 128-6 35-5 29-2 5-5 1h-108l-3-1v-9l5-27 16-85 16-98 9-47 8-44 6-30 2-4z"
+          fill="#022D5A"></path>
+        <path transform="translate(1256,145)"
+          d="m0 0h129l3 2 3 19 11 82 12 89 10 85 7 57 3 27 9 64 14 109v10l-6 2h-106l-2-2-3-18-7-71-10-102-7-79-10-109-4-44-17 35-21 41-13 28-40 80-9 20-13 26-10 19-18 38-25 50-17 35-11 24-12 23-5 6h-117l-3-1 1-7 10-20 7-12 8-16 6-10 10-21 8-16 15-28 9-16 19-38 7-12 8-16 13-24 20-40 11-19 6-12 6-9 9-21 12-22 8-15 10-19 28-54 8-15 12-22 21-42 11-18z"
+          fill="#022D5A"></path>
+      </svg></a>
+    <div class="flex items-center gap-16"><a href="../about/about.html"><span
+          class="text-ocean-blue font-medium text-xs hover:brightness-90 hover:scale-105 transition-all duration-300 ease-in-out">¿Quiénes
+          somos?</span></a><a
+        class="group box-border flex items-center justify-center gap-4 rounded-full transition-all duration-300 ease-in-out bg-ocean-blue hover:brightness-90 hover:scale-105 w-36 h-10"
+        href="../index.html"><span
+          class="text-crystal-white text-center font-semibold text-xs">Inicio</span></a></div>
+  </header>
+  <main class="relative min-h-screen text-center"><img src="./login_files/back.jpg" alt="back"
+      class="fixed top-0 left-0 w-full h-full object-cover z-0">
+    <div class="pt-4">
+      <div
+        class="w-[450px] h-16 bg-salmon-red border-salmon-red border-2 text-crystal-white fade-in flex justify-between items-center p-4 m-2 rounded-full backdrop-blur-sm text-xs hidden">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-info"
+          class="svg-inline--fa fa-circle-info h-6 p-4" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512">
+          <path fill="currentColor"
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z">
+          </path>
+        </svg>
+        <p></p><button><a class="p-4 text-xs">X</a></button>
+      </div>
+    </div>
+    <form class="form flex p-24 gap-[50px] flex-col items-center absolute z-10 inset-0 m-auto">
+      <h2 class="text-xl font-bold text-ocean-blue">Bienvenido</h2>
+      <div class="flex flex-col gap-2 items-start space-y-2 w-full"><label for="username"
+          class="font-semibold text-xs text-ocean-blue">Usuario</label>
+        <div
+          class="relative w-full flex items-center text-[16px] text-ocean-blue rounded-full border focus:outline-none focus:ring-1 hover:ring-1 hover:ring-space-black-10 active:border-ocean-blue border-crystal-white-10 h-[48px]">
+          <input id="username" placeholder="Ingrese su usuario"
+            class="w-full py-2 px-12 text-xs font-medium appearance-none text-space-black bg-transparent border-none focus:outline-none h-full"
+            required="" type="text" value=""></div>
+      </div>
+      <div class="flex flex-col gap-2 items-start space-y-2 w-full"><label for="password"
+          class="font-semibold text-xs text-ocean-blue">Contraseña</label>
+        <div
+          class="relative w-full flex items-center text-[16px] text-ocean-blue rounded-full border focus:outline-none focus:ring-1 hover:ring-1 hover:ring-space-black-10 active:border-ocean-blue border-crystal-white-10 h-[48px]">
+          <input id="password" placeholder="Ingrese su contraseña"
+            class="w-full py-2 px-12 text-xs font-medium appearance-none text-space-black bg-transparent border-none focus:outline-none h-full"
+            required="" type="password" value=""><button type="button" class="absolute right-3 focus:outline-none"><svg
+              aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye"
+              class="svg-inline--fa fa-eye text-ocean-blue" role="img" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z">
+              </path>
+            </svg></button></div>
+      </div>
+      <div class="flex flex-col gap-6 items-center"><button
+          class="group box-border flex items-center justify-center gap-4 rounded-full transition-all duration-300 ease-in-out bg-ocean-blue hover:brightness-90 hover:scale-105 w-[450px] h-10"><span
+            class="text-crystal-white text-center font-bold text-xs">Iniciar Sesión</span></button></div>
+    </form>
+  </main>
+  <footer class="bg-space-black text-white py-8 relative z-20">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center md:space-y-0">
+      <div class="flex flex-col pl-32 items-center space-y-[-20px]"><svg class="h-[100px] w-[100px]"
+          viewBox="0 0 1552 864" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path transform="translate(188,145)"
+            d="m0 0h196l28 2 21 3 36 9 23 8 15 8 17 12 13 12 8 7 11 14 8 13 14 29 6 18 6 24 4 22 2 36v31l-2 31-5 26-7 28-9 25-12 30-12 23-12 18-10 14-13 16-9 10-4 5-11 9-13 11-10 8-16 10-22 10-27 9-28 7-26 4-46 4h-208l-4-1v-10l6-32 9-52 3-8 224-1 25-5 14-5 21-11 12-8 12-11 11-12 10-13 10-18 8-17 9-25 7-27 4-24 2-20 1-20-2-28-3-18-5-19-6-13-7-12-8-10-10-9-16-8-14-6-10-3-7-1-106-1-1 10-10 54-8 41-8 53-10 58-5 26-3 5-5 1h-106l-3-1v-9l10-56 17-100 16-90 12-64 5-23z"
+            fill="#FFFFFF"></path>
+          <path transform="translate(657,145)"
+            d="m0 0h196l37 3 25 5 26 7 17 6 23 12 10 8 10 9 10 8 9 11 10 14 12 23 8 21 8 32 5 30 2 40v14l-3 37-5 26-8 32-10 29-10 23-10 19-10 16-11 15-10 14-12 13-11 11-11 9-14 12-15 10-16 8-17 7-25 8-24 6-27 4-45 4h-209l-4-2 2-17 14-77 3-7 223-1 27-5 15-6 17-9 15-10 13-12 12-14 14-21 8-15 9-25 6-21 6-27 3-20 1-11v-40l-3-21-5-19-6-16-9-16-9-10-12-9-16-8-17-6-10-2-107-1-1 10-7 40-22 128-6 35-5 29-2 5-5 1h-108l-3-1v-9l5-27 16-85 16-98 9-47 8-44 6-30 2-4z"
+            fill="#FFFFFF"></path>
+          <path transform="translate(1256,145)"
+            d="m0 0h129l3 2 3 19 11 82 12 89 10 85 7 57 3 27 9 64 14 109v10l-6 2h-106l-2-2-3-18-7-71-10-102-7-79-10-109-4-44-17 35-21 41-13 28-40 80-9 20-13 26-10 19-18 38-25 50-17 35-11 24-12 23-5 6h-117l-3-1 1-7 10-20 7-12 8-16 6-10 10-21 8-16 15-28 9-16 19-38 7-12 8-16 13-24 20-40 11-19 6-12 6-9 9-21 12-22 8-15 10-19 28-54 8-15 12-22 21-42 11-18z"
+            fill="#FFFFFF"></path>
+        </svg><span class="font-extralight text-[6px]">División de Desarrollo Académico</span></div>
+      <div class="border-y-8 bg-white w-[1px] h-40"></div>
+      <div class="flex flex-col justify-items-start space-y-10">
+        <h3 class="text-sm font-semibold text-morning-yellow">CONÉCTATE</h3>
+        <ul class="space-y-6">
+          <li class="flex items-center space-x-4"><svg aria-hidden="true" focusable="false" data-prefix="fab"
+              data-icon="square-facebook" class="svg-inline--fa fa-square-facebook w-6" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z">
+              </path>
+            </svg><a href="https://facebook.com/usacdda/?locale=es_LA" target="_blank" rel="noopener noreferrer"
+              class="font-medium text-[10px] hover:underline">Facebook.com</a></li>
+          <li class="flex items-center space-x-4"><svg aria-hidden="true" focusable="false" data-prefix="fab"
+              data-icon="square-x-twitter" class="svg-inline--fa fa-square-x-twitter w-6" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z">
+              </path>
+            </svg><a href="https://x.com/usac_diged_dda?lang=es" target="_blank" rel="noopener noreferrer"
+              class="font-medium text-[10px] hover:underline">X.com</a></li>
+          <li class="flex items-center space-x-4"><svg aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="window-maximize" class="svg-inline--fa fa-window-maximize w-6" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor"
+                d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM96 96l320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+              </path>
+            </svg><a href="https://virtual.usac.edu.gt/dda" target="_blank" rel="noopener noreferrer"
+              class="font-medium text-[10px] hover:underline">Virtual.usac.edu.gt/dda</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col justify-items-start mr-[450px]">
+        <h3 class="text-sm font-semibold mt-0 mb-0 text-morning-yellow absolute">UBICACIÓN</h3>
+        <address class="leading-10 mt-10 font-extralight text-xs">Edificio antiguo CALUSAC<br>2o. Nivel Departamento de
+          Educación<br>Ciudad Universitaria, zona 12<br>Ciudad de Guatemala</address>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
